@@ -160,6 +160,11 @@ jobs:
         source: 'release.zip'
         target: '/tmp/shiro'
 
+    - name: Check npm and pm2 in GitHub Actions
+      run: |
+       npm -v
+       pm2 -v
+
     - name: Exec deploy script with SSH
       uses: appleboy/ssh-action@master
       with:
